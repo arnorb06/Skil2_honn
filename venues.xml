@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<venues>
+    <venue id="1">
+        <name>Fosshotel Baron</name>
+        <street>Baronstígur 2-4</street>
+        <city>Reykjavík</city>
+        <country>Iceland</country>
+        <postalCode>101</postalCode>
+        <venueType>HOTEL</venueType>
+    </venue>
+    <venue id="2">
+        <name>Islenski Barinn</name>
+        <street>Posthusstraeti 9</street>
+        <city>Reykjavik</city>
+        <country>Iceland</country>
+        <postalCode>101</postalCode>
+        <venueType>BAR</venueType>
+    </venue>
+    <venue id="3">
+        <name>Enski barinn</name>
+        <street>Austurstræti 12</street>
+        <city>Reykjavik</city>
+        <country>Iceland</country>
+        <postalCode>101</postalCode>
+        <venueType>BAR</venueType>
+    </venue>
+    <venue id="4">
+        <name>Tapas Barrin</name>
+        <street>Vesturgötu 3b</street>
+        <city>Reykjavik</city>
+        <country>Iceland</country>
+        <postalCode>101</postalCode>
+        <venueType>BAR</venueType>
+    </venue>
+    <venue id="5">
+        <name>Thorvaldsen Bar</name>
+        <street>Austurstræti 8</street>
+        <city>Reykjavik</city>
+        <country>Iceland</country>
+        <postalCode>101</postalCode>
+        <venueType>BAR</venueType>
+    </venue>
+    <venue id="6">
+        <name>Apótek Bar Grill</name>
+        <street>Austurstræti 16</street>
+        <city>Reykjavik</city>
+        <country>Iceland</country>
+        <postalCode>101</postalCode>
+        <venueType>BAR</venueType>
+    </venue>
+    <venue id="7">
+        <name>Bar 11</name>
+        <street>Hverfisgata 18</street>
+        <city>Reykjavik</city>
+        <country>Iceland</country>
+        <postalCode>101</postalCode>
+        <venueType>BAR</venueType>
+    </venue>
+    <venue id="8">
+        <name>Q Bar</name>
+        <street>Ingólfsstræti 3</street>
+        <city>Reykjavik</city>
+        <country>Iceland</country>
+        <postalCode>101</postalCode>
+        <venueType>BAR</venueType>
+    </venue>
+    <venue id="9">
+        <name>Næsti Bar</name>
+        <street>Ingólfsstræti 1a</street>
+        <city>Reykjavik</city>
+        <country>Iceland</country>
+        <postalCode>101</postalCode>
+        <venueType>BAR</venueType>
+    </venue>
+    <venue id="10">
+        <name>Portið Veitinga og kaffihús</name>
+        <street>Kringlan</street>
+        <city>Reykjavik</city>
+        <country>Iceland</country>
+        <postalCode>103</postalCode>
+        <venueType>BAR</venueType>
+    </venue>
+    <venue id="11">
+        <name>Cafe Bleu</name>
+        <street>Kringlan</street>
+        <city>Reykjavik</city>
+        <country>Iceland</country>
+        <postalCode>103</postalCode>
+        <venueType>BAR</venueType>
+    </venue>
+</venues>
