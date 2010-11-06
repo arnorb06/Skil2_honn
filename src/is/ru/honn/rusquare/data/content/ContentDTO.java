@@ -9,6 +9,6 @@ package is.ru.honn.rusquare.data.content;
  * @author Thordur Arnarson
  * @version 1.0 Nov 6, 2010
  */
-public interface ContentDTO {
+public class ContentDTO {
 
 }

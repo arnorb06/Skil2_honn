@@ -5,11 +5,13 @@
  */
 package is.ru.honn.rusquare.data.content;
 
+import java.util.List;
+
 /**
  * @author Thordur Arnarson
  * @version 1.0 Nov 6, 2010
  */
 public interface DataGateway {
-	public void add(ContentDTO contentDTO);
-	public void getContent();
+	public int add(ContentDTO contentDTO);
+	public List getContent();
 }

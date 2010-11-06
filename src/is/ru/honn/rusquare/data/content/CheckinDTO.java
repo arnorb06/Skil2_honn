@@ -12,7 +12,7 @@ import java.util.Date;
  *
  * @version 1.0, Nov 6, 2010
  */
-public class CheckinDTO implements ContentDTO{
+public class CheckinDTO extends ContentDTO{
 	private int id;
 	private String Title;
 	private Date checkinDate;

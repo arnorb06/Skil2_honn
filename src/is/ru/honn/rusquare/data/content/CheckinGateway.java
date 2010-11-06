@@ -8,6 +8,7 @@ package is.ru.honn.rusquare.data.content;
 import is.ruframework.data.RuGenericDataAccess;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.jdbc.core.simple.SimpleJdbcInsert;
@@ -21,11 +22,14 @@ public class CheckinGateway extends RuGenericDataAccess implements DataGateway {
 	/* (non-Javadoc)
 	 * @see is.ru.honn.rusquare.data.content.DataGateway#add()
 	 */
-	public void add(CheckinDTO cDTO) {
+	public int add(ContentDTO cDTO) {
 		SimpleJdbcInsert insertContent = new SimpleJdbcInsert(getDataSource()).withTableName("checkin").usingGeneratedKeyColumns("id");
 		Map<String, Object> parameters = new HashMap<String, Object>(4);
-		parameters.put("title", cDTO.getTitle());
-		
+		parameters.put("title", ((CheckinDTO) cDTO).getTitle());
+		parameters.put("checkinDate", ((CheckinDTO) cDTO).getCheckinDate());
+		parameters.put("username", ((CheckinDTO) cDTO).getUsername());
+		parameters.put("venueId", ((CheckinDTO) cDTO).getVenueId());
+		return insertContent.executeAndReturnKey(parameters).intValue();
 
 	}
 
@@ -33,9 +37,9 @@ public class CheckinGateway extends RuGenericDataAccess implements DataGateway {
 	 * @see is.ru.honn.rusquare.data.content.DataGateway#getContent()
 	 */
 	@Override
-	public void getContent() {
-		// TODO Auto-generated method stub
-
+	public List getContent() {
+		// TODO Implement !
+		return null;
 	}
 
 }

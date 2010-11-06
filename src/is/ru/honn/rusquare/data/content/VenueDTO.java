@@ -10,7 +10,7 @@ package is.ru.honn.rusquare.data.content;
  *
  * @version 1.0, Nov 6, 2010
  */
-public class VenueDTO implements ContentDTO{
+public class VenueDTO extends ContentDTO{
 	private int id;
 	private String name;
 	private String street;
