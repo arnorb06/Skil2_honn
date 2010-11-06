@@ -19,6 +19,10 @@ public class CheckinDTO extends ContentDTO{
 	private String username;
 	private int venueId;
 	
+	public CheckinDTO(){
+		
+	}
+	
 	/**
 	 * @return the id
 	 */
