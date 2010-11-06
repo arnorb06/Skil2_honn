@@ -24,10 +24,27 @@ public class VenueDTO extends ContentDTO{
 		
 	}
 	/**
-	 * @return the id
+	 * @param id
+	 * @param name
+	 * @param street
+	 * @param city
+	 * @param country
+	 * @param postalCode
+	 * @param venueType
+	 * @param totalCheckins
 	 */
-	public int getId() {
-		return id;
+	public VenueDTO(int id, String name, String street, String city,
+			String country, String postalCode, String venueType,
+			int totalCheckins) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.street = street;
+		this.city = city;
+		this.country = country;
+		this.postalCode = postalCode;
+		this.venueType = venueType;
+		this.totalCheckins = totalCheckins;
 	}
 	/**
 	 * @param id the id to set
