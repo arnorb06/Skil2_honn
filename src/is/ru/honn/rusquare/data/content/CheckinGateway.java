@@ -7,6 +7,11 @@ package is.ru.honn.rusquare.data.content;
 
 import is.ruframework.data.RuGenericDataAccess;
 
+import java.util.HashMap;
+import java.util.Map;
+
+import org.springframework.jdbc.core.simple.SimpleJdbcInsert;
+
 /**
  * @author Thordur Arnarson
  * @version 1.0 Nov 6, 2010
@@ -16,9 +21,11 @@ public class CheckinGateway extends RuGenericDataAccess implements DataGateway {
 	/* (non-Javadoc)
 	 * @see is.ru.honn.rusquare.data.content.DataGateway#add()
 	 */
-	@Override
-	public void add() {
-		// TODO Auto-generated method stub
+	public void add(CheckinDTO cDTO) {
+		SimpleJdbcInsert insertContent = new SimpleJdbcInsert(getDataSource()).withTableName("checkin").usingGeneratedKeyColumns("id");
+		Map<String, Object> parameters = new HashMap<String, Object>(4);
+		parameters.put("title", cDTO.getTitle());
+		
 
 	}
 
