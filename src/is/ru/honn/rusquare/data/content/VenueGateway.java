@@ -20,7 +20,7 @@ import is.ruframework.data.RuGenericDataAccess;
 public class VenueGateway extends RuGenericDataAccess implements DataGateway{
 	public int add(ContentDTO cDTO) {
 		SimpleJdbcInsert insertContent = new SimpleJdbcInsert(getDataSource()).withTableName("venue").usingGeneratedKeyColumns("id");
-		Map<String, Object> parameters = new HashMap<String, Object>(4);
+		Map<String, Object> parameters = new HashMap<String, Object>(7);
 		parameters.put("name", ((VenueDTO) cDTO).getName());
 		parameters.put("street", ((VenueDTO) cDTO).getStreet());
 		parameters.put("city", ((VenueDTO) cDTO).getCity());
