@@ -36,6 +36,7 @@ public class test_1 {
 		
 		DataGateway checkinDataGateway = (CheckinGateway)factory.getDataAccess("checkinDataAccsess");
 		
+		
 		checkinDataGateway.add(new CheckinDTO(1, "title!", new Date(), "name", 1));
 		
 		DataGateway venueDataGateway = (VenueGateway)factory.getDataAccess("venueDataAccsess");
