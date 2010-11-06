@@ -19,4 +19,5 @@
   </bean>
 	
 	<bean id="checkinDataAccsess" class="is.ru.honn.rusquare.data.content.CheckinGateway" />
+	<bean id="venueDataAccsess" class="is.ru.honn.rusquare.data.content.VenueGateway" />
 </beans>

@@ -20,9 +20,6 @@ public class VenueDTO extends ContentDTO{
 	private String venueType;
 	private int totalCheckins;
 	
-	public VenueDTO(){
-		
-	}
 	/**
 	 * @param id
 	 * @param name

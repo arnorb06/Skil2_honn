@@ -8,6 +8,8 @@ package is.ru.honn.rusquare.test;
 import is.ru.honn.rusquare.data.content.CheckinDTO;
 import is.ru.honn.rusquare.data.content.CheckinGateway;
 import is.ru.honn.rusquare.data.content.DataGateway;
+import is.ru.honn.rusquare.data.content.VenueDTO;
+import is.ru.honn.rusquare.data.content.VenueGateway;
 import is.ruframework.data.RuDataAccessFactory;
 import is.ruframework.factory.RuException;
 
@@ -35,6 +37,10 @@ public class test_1 {
 		DataGateway checkinDataGateway = (CheckinGateway)factory.getDataAccess("checkinDataAccsess");
 		
 		checkinDataGateway.add(new CheckinDTO(1, "title!", new Date(), "name", 1));
+		
+		DataGateway venueDataGateway = (VenueGateway)factory.getDataAccess("venueDataAccsess");
+		
+		venueDataGateway.add(new VenueDTO(1, "nafn", "gata", "borg", "land", "101!", "BAR", 1));
 	}
 
 }
