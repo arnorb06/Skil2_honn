@@ -17,5 +17,6 @@
       <value>592yye</value>
     </property>
   </bean>
-
+	
+	<bean id="checkinDataAccsess" class="is.ru.honn.rusquare.data.content.CheckinGateway" />
 </beans>

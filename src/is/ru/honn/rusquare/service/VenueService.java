@@ -1,6 +1,6 @@
 package is.ru.honn.rusquare.service;
 
-import is.ru.honn.rusquare.data.venue.VenueDTO;
+import is.ru.honn.rusquare.data.content.VenueDTO;
 
 import java.util.Collection;
 
