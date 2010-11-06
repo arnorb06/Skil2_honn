@@ -33,6 +33,14 @@ public class Checkin {
 		this.username = username;
 		this.venueId = venueId;
 	}
+	
+	public void doCheckin(String title, Date date, String username, int venueId) {
+		this.title = title;
+		this.date = date;
+		this.username = username;
+		this.venueId = venueId;
+	}
+	
 	/**
 	 * @return the id
 	 */
