@@ -1,0 +1,168 @@
+<class-diagram version="0.9.86" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
+  associations="true" dependencies="false" nesting-relationships="true">  
+  <class corner="BOTTOM_RIGHT" language="java" name="is.ru.honn.rusquare.data.content.VenueGateway" project="Skil2_honn" 
+    file="/Skil2_honn/src/is/ru/honn/rusquare/data/content/VenueGateway.java" binary="false">    
+    <position x="534" y="289" width="-1" height="-1"/>    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class corner="BOTTOM_RIGHT" language="java" name="is.ru.honn.rusquare.data.content.CheckinRowMapper" 
+    project="Skil2_honn" file="/Skil2_honn/src/is/ru/honn/rusquare/data/content/CheckinRowMapper.java" binary="false">    
+    <position x="1352" y="36" width="-1" height="-1"/>    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <interface corner="BOTTOM_RIGHT" language="java" name="is.ru.honn.rusquare.service.CheckinService" 
+    project="Skil2_honn" file="/Skil2_honn/src/is/ru/honn/rusquare/service/CheckinService.java" binary="false">    
+    <position x="273" y="62" width="-1" height="-1"/>    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </interface>  
+  <class corner="BOTTOM_RIGHT" language="java" name="is.ru.honn.rusquare.data.content.ContentDTO" project="Skil2_honn" 
+    file="/Skil2_honn/src/is/ru/honn/rusquare/data/content/ContentDTO.java" binary="false">    
+    <position x="1056" y="43" width="-1" height="-1"/>    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class corner="BOTTOM_RIGHT" language="java" name="is.ru.honn.rusquare.service.VenueServiceImpl" project="Skil2_honn" 
+    file="/Skil2_honn/src/is/ru/honn/rusquare/service/VenueServiceImpl.java" binary="false">    
+    <position x="117" y="337" width="-1" height="-1"/>    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class corner="BOTTOM_RIGHT" language="java" name="is.ru.honn.rusquare.data.content.VenueDTO" project="Skil2_honn" 
+    file="/Skil2_honn/src/is/ru/honn/rusquare/data/content/VenueDTO.java" binary="false">    
+    <position x="922" y="378" width="-1" height="-1"/>    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class corner="BOTTOM_RIGHT" language="java" name="is.ru.honn.rusquare.data.content.CheckinDTO" project="Skil2_honn" 
+    file="/Skil2_honn/src/is/ru/honn/rusquare/data/content/CheckinDTO.java" binary="false">    
+    <position x="1148" y="314" width="-1" height="-1"/>    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <interface corner="BOTTOM_RIGHT" language="java" name="is.ru.honn.rusquare.service.VenueService" project="Skil2_honn" 
+    file="/Skil2_honn/src/is/ru/honn/rusquare/service/VenueService.java" binary="false">    
+    <position x="117" y="77" width="-1" height="-1"/>    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </interface>  
+  <class corner="BOTTOM_RIGHT" language="java" name="is.ru.honn.rusquare.domain.Checkin" project="Skil2_honn" 
+    file="/Skil2_honn/src/is/ru/honn/rusquare/domain/Checkin.java" binary="false">    
+    <position x="1361" y="432" width="-1" height="-1"/>    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class corner="BOTTOM_RIGHT" language="java" name="is.ru.honn.rusquare.data.content.CheckinGateway" 
+    project="Skil2_honn" file="/Skil2_honn/src/is/ru/honn/rusquare/data/content/CheckinGateway.java" binary="false">    
+    <position x="725" y="278" width="-1" height="-1"/>    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class corner="BOTTOM_RIGHT" language="java" name="is.ru.honn.rusquare.service.CheckinServiceImpl" 
+    project="Skil2_honn" file="/Skil2_honn/src/is/ru/honn/rusquare/service/CheckinServiceImpl.java" binary="false">    
+    <position x="275" y="336" width="-1" height="-1"/>    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class corner="BOTTOM_RIGHT" language="java" name="is.ru.honn.rusquare.data.content.VenueRowMapper" 
+    project="Skil2_honn" file="/Skil2_honn/src/is/ru/honn/rusquare/data/content/VenueRowMapper.java" binary="false">    
+    <position x="1352" y="106" width="-1" height="-1"/>    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <interface corner="BOTTOM_RIGHT" language="java" name="is.ru.honn.rusquare.data.content.DataGateway" 
+    project="Skil2_honn" file="/Skil2_honn/src/is/ru/honn/rusquare/data/content/DataGateway.java" binary="false">    
+    <position x="579" y="87" width="-1" height="-1"/>    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </interface>  
+  <realization>    
+    <source project="Skil2_honn" name="is.ru.honn.rusquare.data.content.VenueGateway" 
+      file="/Skil2_honn/src/is/ru/honn/rusquare/data/content/VenueGateway.java" binary="false"/>    
+    <target project="Skil2_honn" name="is.ru.honn.rusquare.data.content.DataGateway" 
+      file="/Skil2_honn/src/is/ru/honn/rusquare/data/content/DataGateway.java" binary="false"/>  
+  </realization>  
+  <realization>    
+    <source project="Skil2_honn" name="is.ru.honn.rusquare.service.CheckinServiceImpl" 
+      file="/Skil2_honn/src/is/ru/honn/rusquare/service/CheckinServiceImpl.java" binary="false"/>    
+    <target project="Skil2_honn" name="is.ru.honn.rusquare.service.CheckinService" 
+      file="/Skil2_honn/src/is/ru/honn/rusquare/service/CheckinService.java" binary="false"/>  
+  </realization>  
+  <association>    
+    <source project="Skil2_honn" name="is.ru.honn.rusquare.service.VenueServiceImpl" 
+      file="/Skil2_honn/src/is/ru/honn/rusquare/service/VenueServiceImpl.java" binary="false" navigable="false">      
+      <attribute name="datagateway"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target project="Skil2_honn" name="is.ru.honn.rusquare.data.content.DataGateway" 
+      file="/Skil2_honn/src/is/ru/honn/rusquare/data/content/DataGateway.java" binary="false" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization>    
+    <source project="Skil2_honn" name="is.ru.honn.rusquare.data.content.VenueDTO" 
+      file="/Skil2_honn/src/is/ru/honn/rusquare/data/content/VenueDTO.java" binary="false"/>    
+    <target project="Skil2_honn" name="is.ru.honn.rusquare.data.content.ContentDTO" 
+      file="/Skil2_honn/src/is/ru/honn/rusquare/data/content/ContentDTO.java" binary="false"/>  
+  </generalization>  
+  <realization>    
+    <source project="Skil2_honn" name="is.ru.honn.rusquare.data.content.CheckinGateway" 
+      file="/Skil2_honn/src/is/ru/honn/rusquare/data/content/CheckinGateway.java" binary="false"/>    
+    <target project="Skil2_honn" name="is.ru.honn.rusquare.data.content.DataGateway" 
+      file="/Skil2_honn/src/is/ru/honn/rusquare/data/content/DataGateway.java" binary="false"/>  
+  </realization>  
+  <realization>    
+    <source project="Skil2_honn" name="is.ru.honn.rusquare.service.VenueServiceImpl" 
+      file="/Skil2_honn/src/is/ru/honn/rusquare/service/VenueServiceImpl.java" binary="false"/>    
+    <target project="Skil2_honn" name="is.ru.honn.rusquare.service.VenueService" 
+      file="/Skil2_honn/src/is/ru/honn/rusquare/service/VenueService.java" binary="false"/>  
+  </realization>  
+  <association>    
+    <source project="Skil2_honn" name="is.ru.honn.rusquare.service.CheckinServiceImpl" 
+      file="/Skil2_honn/src/is/ru/honn/rusquare/service/CheckinServiceImpl.java" binary="false" navigable="false">      
+      <attribute name="dataGateway"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target project="Skil2_honn" name="is.ru.honn.rusquare.data.content.DataGateway" 
+      file="/Skil2_honn/src/is/ru/honn/rusquare/data/content/DataGateway.java" binary="false" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization>    
+    <source project="Skil2_honn" name="is.ru.honn.rusquare.data.content.CheckinDTO" 
+      file="/Skil2_honn/src/is/ru/honn/rusquare/data/content/CheckinDTO.java" binary="false"/>    
+    <target project="Skil2_honn" name="is.ru.honn.rusquare.data.content.ContentDTO" 
+      file="/Skil2_honn/src/is/ru/honn/rusquare/data/content/ContentDTO.java" binary="false"/>  
+  </generalization>  
+  <classifier-display autosize="true" package="true" initial-value="false" signature="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true"/>    
+    <operations public="true" package="true" protected="true" private="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>
