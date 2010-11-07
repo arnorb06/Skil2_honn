@@ -43,4 +43,20 @@ public class VenueGateway extends RuGenericDataAccess implements DataGateway{
 		jdbc.query("select * from venue", mapper); 
 		return mapper.getResults();
 	}
+	
+	public VenueDTO getContentByName(String name) {
+		JdbcTemplate jdbc = new JdbcTemplate(getDataSource());
+		VenueRowMapper mapper = new VenueRowMapper(); 
+		jdbc.query("select " + name + "from venue", mapper);
+		return (VenueDTO) mapper.getResults();
+	}
+
+	/* (non-Javadoc)
+	 * @see is.ru.honn.rusquare.data.content.DataGateway#getContentByName()
+	 */
+	@Override
+	public ContentDTO getContentByName() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

@@ -45,4 +45,13 @@ public class CheckinGateway extends RuGenericDataAccess implements DataGateway {
 		return mapper.getResults();
 	}
 
+	/* (non-Javadoc)
+	 * @see is.ru.honn.rusquare.data.content.DataGateway#getContentByName()
+	 */
+	@Override
+	public ContentDTO getContentByName() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
