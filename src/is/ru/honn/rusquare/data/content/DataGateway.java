@@ -14,5 +14,5 @@ import java.util.List;
 public interface DataGateway {
 	public int add(ContentDTO contentDTO);
 	public List getContent();
-	public ContentDTO getContentByName();
+	public ContentDTO getContentByName(String name);
 }

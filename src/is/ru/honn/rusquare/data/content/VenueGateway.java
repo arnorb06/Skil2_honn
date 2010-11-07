@@ -13,6 +13,7 @@ import java.util.Map;
 
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.simple.SimpleJdbcInsert;
+import org.springframework.jdbc.core.simple.SimpleJdbcTemplate;
 
 /**
  * @author Thordur Arnarson
@@ -40,23 +41,14 @@ public class VenueGateway extends RuGenericDataAccess implements DataGateway{
 	public List getContent() {
 		JdbcTemplate jdbc = new JdbcTemplate(getDataSource());
 		VenueRowMapper mapper = new VenueRowMapper(); 
-		jdbc.query("select * from venue", mapper); 
+		jdbc.query("select * from venues", mapper); 
 		return mapper.getResults();
 	}
 	
 	public VenueDTO getContentByName(String name) {
 		JdbcTemplate jdbc = new JdbcTemplate(getDataSource());
-		VenueRowMapper mapper = new VenueRowMapper(); 
-		jdbc.query("select " + name + "from venue", mapper);
-		return (VenueDTO) mapper.getResults();
-	}
-
-	/* (non-Javadoc)
-	 * @see is.ru.honn.rusquare.data.content.DataGateway#getContentByName()
-	 */
-	@Override
-	public ContentDTO getContentByName() {
-		// TODO Auto-generated method stub
-		return null;
+		
+		//work when there is a single instance of name, not when there are multiple entries with name
+		return (VenueDTO)jdbc.queryForObject("select * from venues where name=" + name, new VenueRowMapper());
 	}
 }
