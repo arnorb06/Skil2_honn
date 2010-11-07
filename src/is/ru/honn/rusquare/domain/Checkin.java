@@ -104,5 +104,4 @@ public class Checkin {
 	public void doCheckin(){
 		
 	}
-	}
 }
