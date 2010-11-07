@@ -11,6 +11,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.simple.SimpleJdbcInsert;
 
 /**
@@ -38,8 +39,10 @@ public class CheckinGateway extends RuGenericDataAccess implements DataGateway {
 	 */
 	@Override
 	public List getContent() {
-		// TODO Implement !
-		return null;
+		JdbcTemplate jdbcTemplate = new JdbcTemplate(getDataSource());
+		CheckinRowMapper mapper = new CheckinRowMapper();
+		jdbcTemplate.query("select * from checkin", mapper);
+		return mapper.getResults();
 	}
 
 }
