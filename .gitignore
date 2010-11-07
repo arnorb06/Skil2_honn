@@ -1,0 +1,7 @@
+*.classpath
+*.~
+*.class
+*.lock
+*.DS_Store
+*.out
+*.pdf
