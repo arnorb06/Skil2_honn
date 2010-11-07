@@ -5,13 +5,14 @@
  */
 package is.ru.honn.rusquare.data.content;
 
+import is.ruframework.data.RuGenericDataAccess;
+
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.simple.SimpleJdbcInsert;
-
-import is.ruframework.data.RuGenericDataAccess;
 
 /**
  * @author Thordur Arnarson
@@ -37,7 +38,9 @@ public class VenueGateway extends RuGenericDataAccess implements DataGateway{
 	 */
 	@Override
 	public List getContent() {
-		// TODO Auto-generated method stub
-		return null;
+		JdbcTemplate jdbc = new JdbcTemplate(getDataSource());
+		VenueRowMapper mapper = new VenueRowMapper(); 
+		jdbc.query("select * from venue", mapper); 
+		return mapper.getResults();
 	}
 }
