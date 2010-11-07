@@ -101,5 +101,8 @@ public class Checkin {
 	public void setVenueId(int venueId) {
 		this.venueId = venueId;
 	}
-	
+	public void doCheckin(){
+		
+	}
+	}
 }
