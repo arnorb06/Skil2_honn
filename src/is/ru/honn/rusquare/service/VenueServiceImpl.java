@@ -5,13 +5,11 @@
  */
 package is.ru.honn.rusquare.service;
 
-import java.util.Collection;
-
-import com.sun.xml.internal.bind.v2.TODO;
-
 import is.ru.honn.rusquare.data.content.DataGateway;
 import is.ru.honn.rusquare.data.content.VenueDTO;
 import is.ru.honn.rusquare.data.content.VenueGateway;
+
+import java.util.Collection;
 
 /**
  * @author Thordur Arnarson
@@ -19,6 +17,20 @@ import is.ru.honn.rusquare.data.content.VenueGateway;
  */
 public class VenueServiceImpl implements VenueService{
 	DataGateway datagateway = new VenueGateway();
+
+	/**
+	 * @return the datagateway
+	 */
+	public DataGateway getDatagateway() {
+		return datagateway;
+	}
+
+	/**
+	 * @param datagateway the datagateway to set
+	 */
+	public void setDatagateway(DataGateway datagateway) {
+		this.datagateway = datagateway;
+	}
 
 	/* (non-Javadoc)
 	 * @see is.ru.honn.rusquare.service.VenueService#addNewVenue(is.ru.honn.rusquare.data.content.VenueDTO, java.lang.String)
