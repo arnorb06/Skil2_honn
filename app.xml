@@ -2,18 +2,16 @@
 <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
 
 <beans>
-  <bean id="messageSource"
-        class="org.springframework.context.support.ResourceBundleMessageSource">
-    <property name="basename">
-      <value>messages</value>
-    </property>
-  </bean>
-	
-	<bean id="XMLreader" class="">
-	
+	<bean id="messageSource"
+		class="org.springframework.context.support.ResourceBundleMessageSource">
+		<property name="basename">
+			<value>messages</value>
+		</property>
 	</bean>
-	
+	<bean id="XMLreader" class="">
+	</bean>
 	<bean id="VenueServiceImpl" class="is.ru.honn.rusquare.service.VenueServiceImpl">
-		
-	</bean>  
+	</bean>
+	<bean id="checkinService" class="is.ru.honn.rusquare.service.CheckinService">
+	</bean>
 </beans>
