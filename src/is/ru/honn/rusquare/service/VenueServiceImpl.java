@@ -7,6 +7,8 @@ package is.ru.honn.rusquare.service;
 
 import java.util.Collection;
 
+import com.sun.xml.internal.bind.v2.TODO;
+
 import is.ru.honn.rusquare.data.content.DataGateway;
 import is.ru.honn.rusquare.data.content.VenueDTO;
 import is.ru.honn.rusquare.data.content.VenueGateway;
@@ -43,7 +45,8 @@ public class VenueServiceImpl implements VenueService{
 	 */
 	@Override
 	public VenueDTO getVenue(String name) {
-		return (VenueDTO) datagateway.getContentByName();
+		return (VenueDTO) datagateway.getContentByName("Test");
+		//TODO Put real name as parameter
 	}
 	
 }

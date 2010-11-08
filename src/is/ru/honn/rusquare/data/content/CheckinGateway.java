@@ -49,7 +49,7 @@ public class CheckinGateway extends RuGenericDataAccess implements DataGateway {
 	 * @see is.ru.honn.rusquare.data.content.DataGateway#getContentByName()
 	 */
 	@Override
-	public ContentDTO getContentByName() {
+	public ContentDTO getContentByName(String name) {
 		// TODO Auto-generated method stub
 		return null;
 	}

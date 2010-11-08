@@ -133,4 +133,14 @@ public class VenueDTO extends ContentDTO{
 	public void setTotalCheckins(int totalCheckins) {
 		this.totalCheckins = totalCheckins;
 	}
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		return "VenueDTO [id=" + id + ", name=" + name + ", street=" + street
+				+ ", city=" + city + ", country=" + country + ", postalCode="
+				+ postalCode + ", venueType=" + venueType + ", totalCheckins="
+				+ totalCheckins + "]";
+	}
 }

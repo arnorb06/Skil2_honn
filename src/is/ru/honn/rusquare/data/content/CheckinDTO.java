@@ -97,4 +97,15 @@ public class CheckinDTO extends ContentDTO{
 	public void setVenueId(int venueId) {
 		this.venueId = venueId;
 	}
+
+
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		return "CheckinDTO [id=" + id + ", Title=" + Title + ", checkinDate="
+				+ checkinDate + ", username=" + username + ", venueId="
+				+ venueId + "]";
+	}
 }

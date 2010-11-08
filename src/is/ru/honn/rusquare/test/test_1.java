@@ -14,6 +14,7 @@ import is.ruframework.data.RuDataAccessFactory;
 import is.ruframework.factory.RuException;
 
 import java.util.Date;
+import java.util.List;
 import java.util.logging.Logger;
 
 /**
@@ -36,12 +37,27 @@ public class test_1 {
 		
 		DataGateway checkinDataGateway = (CheckinGateway)factory.getDataAccess("checkinDataAccsess");
 		
-		
+		//check for .add() into chenkin table
 		checkinDataGateway.add(new CheckinDTO(1, "title!", new Date(), "name", 1));
+		
+		//test for .getContent() from checkin table
+		List clist = checkinDataGateway.getContent();
+		for (Object cDTO: clist)
+			System.out.println(cDTO);	
 		
 		DataGateway venueDataGateway = (VenueGateway)factory.getDataAccess("venueDataAccsess");
 		
+		//test for .add() into venues table
 		venueDataGateway.add(new VenueDTO(1, "nafn", "gata", "borg", "land", "101!", "BAR", 1));
+		
+		//test for .getContent() from venues table
+		List vlist = venueDataGateway.getContent();
+		for(Object o: vlist)
+			System.out.println(o);
+		
+		//test for .getContentByName() from venues table
+		VenueDTO vDTO = (VenueDTO) venueDataGateway.getContentByName("nafn");
+		System.out.println("Test: venueDTO.getContentByName " + vDTO);
 	}
 
 }
