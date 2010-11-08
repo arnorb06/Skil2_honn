@@ -8,5 +8,12 @@
       <value>messages</value>
     </property>
   </bean>
-
+	
+	<bean id="XMLreader" class="">
+	
+	</bean>
+	
+	<bean id="VenueServiceImpl" class="is.ru.honn.rusquare.service.VenueServiceImpl">
+		
+	</bean>  
 </beans>
