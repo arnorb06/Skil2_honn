@@ -55,6 +55,7 @@ public class RuSqureClient {
 		Checkin checkin = checkinServiceImpl.checkin(args[0], args[1]);
 		
 		VenueDTO venueDTO = venueServiceImpl.getVenueByName(checkin.getTitle());
+		System.out.println(venueDTO.getId());
 		List list = checkinServiceImpl.getUsersByVenueId(venueDTO.getId());
 		Iterator it = list.iterator();
 		System.out.println("You have logged into: "+ venueDTO.getName());

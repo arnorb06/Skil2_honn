@@ -32,15 +32,11 @@ public class CheckinServiceImpl implements CheckinService{
 		
 		VenueDTO venueDTO = venueServiceImpl.getVenueByName(venueName);
 		int venueId = venueDTO.getId(); 
-		//TODO update venue table with VenueGateway.update()
 		
-		System.out.println(venueDTO.getTotalCheckins());
 		venueDTO.setTotalCheckins(venueDTO.getTotalCheckins() + 1); 
-		System.out.println(venueDTO.getTotalCheckins());
 		venueServiceImpl.updateTotalCheckins(venueDTO);
 		
 		CheckinDTO checkinDTO = new CheckinDTO(venueName, new Date(), username, venueId);
-		System.out.println(checkinDTO);
 		dataGateway.add(checkinDTO);
 		
 		checkin = new Checkin();
