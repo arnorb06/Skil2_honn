@@ -71,6 +71,8 @@ public class CheckinServiceImpl implements CheckinService{
 	}
 	
 	public VenueDTO getContentById(int id) {
+		
+		//TODO impliment method
 		return null;
 	}
 }
