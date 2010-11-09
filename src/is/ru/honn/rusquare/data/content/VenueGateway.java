@@ -69,4 +69,13 @@ public class VenueGateway extends RuGenericDataAccess implements DataGateway{
 		
 		return (VenueDTO)jdbc.queryForObject("SELECT * FROM venues WHERE id=?", new VenueRowMapper(), id);
 	}
+
+	/* (non-Javadoc)
+	 * @see is.ru.honn.rusquare.data.content.DataGateway#getUsersByVenueId(int)
+	 */
+	@Override
+	public List getUsersByVenueId(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

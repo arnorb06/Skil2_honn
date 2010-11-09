@@ -70,5 +70,7 @@ public class VenueServiceImpl implements VenueService{
 	public VenueDTO getVenueByName(String venueName) {
 		return datagateway.getVenueIdByName(venueName);
 	}
-	
+	public VenueDTO getContentById(int id){
+		return (VenueDTO) datagateway.getContentById(id);
+	}
 }

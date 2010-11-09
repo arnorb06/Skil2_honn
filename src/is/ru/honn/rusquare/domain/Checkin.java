@@ -16,13 +16,17 @@ import java.util.Date;
  * @version 1.0, Nov 5, 2010
  */
 public class Checkin {
-	int id;
-	String title;
-	Date date;
-	String username;
-	int venueId;
+	private int id;
+	private String title;
+	private Date date;
+	private String username;
+	private int venueId;
 	
-	CheckinDTO checkinDTO;
+	
+	public Checkin(){
+		
+	}
+	
 	
 	/**
 	 * @param id
@@ -46,7 +50,6 @@ public class Checkin {
 		this.venueId = checkinDTO.getVenueId();
 		
 		return this; 
-		
 	}
 	
 	/**
@@ -116,7 +119,6 @@ public class Checkin {
 	@Override
 	public String toString() {
 		return "Checkin [id=" + id + ", title=" + title + ", date=" + date
-				+ ", username=" + username + ", venueId=" + venueId
-				+ ", checkinDTO=" + checkinDTO + "]";
+				+ ", username=" + username + ", venueId=" + venueId + "]";
 	}
 }

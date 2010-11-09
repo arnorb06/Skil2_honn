@@ -63,4 +63,16 @@ public class CheckinGateway extends RuGenericDataAccess implements DataGateway {
 		return null;
 	}
 
+	/* (non-Javadoc)
+	 * @see is.ru.honn.rusquare.data.content.DataGateway#getUsersByVenueId(int)
+	 */
+	@Override
+	public List getUsersByVenueId(int id) {
+		JdbcTemplate jdbc = new JdbcTemplate(getDataSource());
+		CheckinRowMapper mapper = new CheckinRowMapper(); 
+		jdbc.query("select username from checkin where venueid=? group by username",
+	               new Object[]{id}, mapper);
+		return mapper.getResults();
+	}
+
 }

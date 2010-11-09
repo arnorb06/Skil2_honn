@@ -16,4 +16,5 @@ public interface DataGateway {
 	public List getContent();
 	public ContentDTO getContentByName(String name);
 	public ContentDTO getContentById(int id);
+	public List getUsersByVenueId(int id);
 }

@@ -7,7 +7,6 @@ package is.ru.honn.rusquare.service;
 
 import is.ru.honn.rusquare.data.content.CheckinDTO;
 import is.ru.honn.rusquare.data.content.CheckinGateway;
-import is.ru.honn.rusquare.data.content.ContentDTO;
 import is.ru.honn.rusquare.data.content.DataGateway;
 import is.ru.honn.rusquare.data.content.VenueDTO;
 import is.ru.honn.rusquare.domain.Checkin;
@@ -38,6 +37,8 @@ public class CheckinServiceImpl implements CheckinService{
 		CheckinDTO checkinDTO = new CheckinDTO(venueName, new Date(), username, venueId);
 		
 		dataGateway.add(checkinDTO);
+		
+		checkin = new Checkin();
 		
 		return checkin.doCheckin(checkinDTO);
 	}
@@ -70,9 +71,11 @@ public class CheckinServiceImpl implements CheckinService{
 		this.venueServiceImpl = venueServiceImpl;
 	}
 	
-	public VenueDTO getContentById(int id) {
+	public VenueDTO getVenueById(int id) {
 		
-		//TODO impliment method
-		return null;
+		return venueServiceImpl.getContentById(id);
+	}
+	public List getUsersByVenueId(int id){
+		return this.dataGateway.getUsersByVenueId(id);
 	}
 }
