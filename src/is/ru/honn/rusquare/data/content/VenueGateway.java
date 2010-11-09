@@ -75,7 +75,6 @@ public class VenueGateway extends RuGenericDataAccess implements DataGateway{
 		SimpleJdbcTemplate jdbc = new SimpleJdbcTemplate(getDataSource());
 
 		return jdbc.update("UPDATE venues SET totalCheckins=? WHERE id=?", new Object[] {venueDTO.getTotalCheckins(), venueDTO.getId()}); 
-		//insertContent.executeAndReturnKey(parameters).intValue();
 	}
 
 
