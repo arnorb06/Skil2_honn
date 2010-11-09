@@ -3,18 +3,16 @@
 	<!-- ======================================================== -->
 	<!-- Global properties -->
 	<!-- ======================================================== -->
-	<property name="src.java" value="src/java" />
-	<property name="src.msg" value="src/msg" />
+	<property name="xml.file" value="." />
+	<property name="src.java" value="src" />
+	<property name="src.msg" value="msg" />
 	<property name="output.dir" value="classes" />
 	<property name="dist.dir" value="dist" />
-	<property name="lib.dir" value="libVerk2" />
-	<property name="jdome.dir" value="jdome" />
+	<property name="lib.dir" value="lib" />
 	<property name="jar.file" value="RuSquareClient.jar" />
 	<property name="classpath"
-		value="${jdom.dir}/jdom.jar:${lib.dir}/spring-
-beans.jar:${lib.dir}/spring-core.jar:${lib.dir}/spring-context.jar:${lib.dir}/spring-
-asm.jar:${lib.dir}/spring-expression.jar:${lib.dir}/commons-
-logging.jar:${lib.dir}/ruframework.jar:${lib.dir}/jdts-1.2.5.jar" />
+		value="${lib.dir}/jdom.jar:${lib.dir}/spring-beans.jar:${lib.dir}/spring-core.jar:${lib.dir}/spring-context.jar:${lib.dir}/spring-asm.jar:${lib.dir}/spring-expression.jar:${lib.dir}/commons-logging.jar:${lib.dir}/ruframework.jar:${lib.dir}/spring-jdbc.jar:
+${lib.dir}/jdts-1.2.5.jar:${lib.dir}/aopalliance.jar:${lib.dir}/spring-aop.jar:${lib.dir}/spring-aspects.jar:${lib.dir}/spring-instrument.jar:${lib.dir}/spring-jms.jar:${lib.dir}/spring-orm.jar:${lib.dir}/spring-oxm.jar:${lib.dir}/spring-tx.jar:${xml.file}data.xml:${xml.file}app.xml:${xml.file}process.xml"/>
 	<!-- ======================================================== -->
 	<target name="init" description="Prepare by creating output directories">
 		<mkdir dir="${output.dir}" />
@@ -23,24 +21,26 @@ logging.jar:${lib.dir}/ruframework.jar:${lib.dir}/jdts-1.2.5.jar" />
 	<!-- ======================================================== -->
 	<target name="compile" depends="init"
 		description="Compilation of all source files">
-		<javac srcdir="src/is/ru/honn/rusquare" destdir="${output.dir}" classpath="${classpath}" />
+		<javac srcdir="${src.java}" 
+			destdir="${output.dir}" 
+			classpath="${classpath}" />
 	</target>
 	<!-- ======================================================== -->
 	<target name="jar" depends="compile" description="Create the JAR">
 		<jar jarfile="${dist.dir}/${jar.file}" basedir="${output.dir}">
 			<fileset dir="${src.msg}" />
 			<manifest>
-				<attribute name="Main -Class" value="is.ru.honn.rusquare.client.RuSquareClient" />
+				<attribute name="Main-Class" value="is.ru.honn.rusquare.client.RuSqureClient" />
 			</manifest>
 		</jar>
 	</target>
 	<!-- ======================================================== -->
-	<target name="run" depends="jar" description="Runs the process">
-		<java classname="is.ru.honn.rusquare.client.RuSquareClient">
+	<target name="run" depends="jar" description="Runs the client">
+		<java classname="is.ru.honn.rusquare.client.RuSqureClient">
 			<classpath>
 				<pathelement path="${classpath}" />
 				<pathelement path="${java.class.path}" />
-				<pathelement location="${dist.dir} \RuSquareClient.jar" />
+				<pathelement location="${dist.dir}\RuSquareClient.jar" />
 			</classpath>
 			<arg value="Doddi 'Bar 11'" />
 		</java>

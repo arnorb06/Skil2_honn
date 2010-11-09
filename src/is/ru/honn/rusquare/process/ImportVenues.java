@@ -17,9 +17,11 @@ import is.ruframework.feeds.RuFeedHandler;
 import is.ruframework.feeds.RuFeedReader;
 import is.ruframework.process.RuAbstractProcess;
 
+import java.util.Locale;
 import java.util.logging.Logger;
 
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.MessageSource;
 import org.springframework.context.support.FileSystemXmlApplicationContext;
 
 /**
@@ -36,6 +38,7 @@ public class ImportVenues extends RuAbstractProcess implements RuFeedHandler{
 	String file;
 	RuDataAccessFactory factory;
 	DataGateway venueDataGateway;
+	MessageSource msg;
 	
 	public void beforeProcess(){
 		log.info("before prosess");
@@ -51,7 +54,10 @@ public class ImportVenues extends RuAbstractProcess implements RuFeedHandler{
 		reader = new XMLFeedReader();
 		reader.setFeedHandler(this);
 		venueService.setDatagateway(venueDataGateway);
-		
+		msg = (MessageSource)appCtx.getBean("messageSource");
+		log.info(msg.getMessage("processbefore",
+				new Object[] { getProcessContext().getProcessName() } ,
+				Locale.getDefault()));
 	}
 	
 	/* (non-Javadoc)
@@ -60,14 +66,17 @@ public class ImportVenues extends RuAbstractProcess implements RuFeedHandler{
 	@Override
 	public void startProcess(){
 		
-		log.info("start prosess");
+		log.info(msg.getMessage("processstart",
+				new Object[] { getProcessContext().getProcessName() },
+				Locale.getDefault()));
 		try {
 			reader.read("venues.xml");
 		} catch (RuFeedException e) {
-			log.info(e.getMessage() + " in startProcess. ");
-			e.printStackTrace();
+			log.info(msg.getMessage("processreaderror",
+					new Object[] { getProcessContext().getImportFile() },
+					Locale.getDefault()));
+					log.info(e.getMessage());
 		}
-		
 	}
 	
 	public void afterProcess(){
