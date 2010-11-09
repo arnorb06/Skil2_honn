@@ -1,1 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<project name="ImportContentProcess" default="jar" basedir=".">
+	<!-- ======================================================== -->
+	<!-- Global properties -->
+	<!-- ======================================================== -->
+	<property name="src.java" value="src/java" />
+	<property name="src.msg" value="src/msg" />
+	<property name="output.dir" value="classes" />
+	<property name="dist.dir" value="dist" />
+	<property name="lib.dir" value="lib" />
+	<property name="jar.file" value="ImportContentProcess.jar" />
+	<property name="classpath"
+		value="${lib.dir}/rome -1.0.jar:${lib.dir}/jdom.jar:${lib.dir}/spring -
+beans.jar:${lib.dir}/spring-core.jar:${lib.dir}/spring -context.jar:${lib.dir}/spring -
+asm.jar:${lib.dir}/spring -expression.jar:${lib.dir}/commons -
+logging.jar:${lib.dir}/ruframework.jar" />
+	<!-- ======================================================== -->
+	<target name="init" description="Prepare by creating output directories">
+		<mkdir dir="${output.dir}" />
+		<mkdir dir="${dist.dir}" />
+	</target>
+	<!-- ======================================================== -->
+	<target name="compile" dep ends="init"
+		description="Compilation of all source files">
+		<javac srcdir="${src.java}" destdir="${output.dir}" classpath="${classpath}" />
+	</target>
+	<!-- ======================================================== -->
+	<target name="jar" depends="compile" description="Create the JAR">
+		<jar jarfile="${dist.dir}/${jar.file}" basedir="${output.dir}">
+			<fileset dir="${src.msg}" />
+			<manifest>
+				<attribute name="Main -Class" value="is.ruframework.process.RuProcessRunner" />
+			</manifest>
+		</jar>
+	</target>
+	<!-- ======================================================== -->
+	<target name="run" depends="jar" description="Runs the process">
+		<java classname="is.ruframework.process.RuProcessRunner">
+			<classpath>
+				<pathelement path="${classpath}" />
+				<pathelement path="${java.class.path}" />
+				<pathelement location="${dist.dir} \ImportContentProcess.jar" />
+			</classpath>
+			<arg value="process.xml" />
+		</java>
+	</target>
+	<!-- ======================================================== -->
+	<target name="clean" description="Delete all generated files">
+		<delete dir="${output.dir}" />
+		<delete dir="${dist.dir} " />
+	</target>
+</project>

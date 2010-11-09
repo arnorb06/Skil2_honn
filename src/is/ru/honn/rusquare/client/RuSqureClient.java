@@ -5,14 +5,19 @@
  */
 package is.ru.honn.rusquare.client;
 
+import is.ru.honn.rusquare.data.content.CheckinDTO;
 import is.ru.honn.rusquare.data.content.CheckinGateway;
 import is.ru.honn.rusquare.data.content.DataGateway;
+import is.ru.honn.rusquare.data.content.VenueDTO;
 import is.ru.honn.rusquare.data.content.VenueGateway;
+import is.ru.honn.rusquare.domain.Checkin;
 import is.ru.honn.rusquare.service.CheckinServiceImpl;
 import is.ru.honn.rusquare.service.VenueServiceImpl;
 import is.ruframework.data.RuDataAccessFactory;
 import is.ruframework.factory.RuException;
 
+import java.util.Iterator;
+import java.util.List;
 import java.util.logging.Logger;
 
 import org.springframework.context.ApplicationContext;
@@ -47,8 +52,18 @@ public class RuSqureClient {
 		venueServiceImpl.setDatagateway(venueDataGateway);
 		checkinServiceImpl.setVenueServiceImpl(venueServiceImpl);
 		
-		checkinServiceImpl.checkin(args[0], args[1]);
+		Checkin checkin = checkinServiceImpl.checkin(args[0], args[1]);
 		
-		System.out.println("You have logged into: ");
+		VenueDTO venueDTO = venueServiceImpl.getVenueByName(checkin.getTitle());
+		List list = checkinServiceImpl.getUsersByVenueId(venueDTO.getId());
+		Iterator it = list.iterator();
+		System.out.println("You have logged into: "+ venueDTO.getName());
+		System.out.println("Total number of checkins: "+ venueDTO.getTotalCheckins());
+		System.out.println("Also checked in there: ");
+		while(it.hasNext()){
+			CheckinDTO checkinDTO = new CheckinDTO();
+			checkinDTO = (CheckinDTO) it.next();
+			System.out.println(checkinDTO.getUsername());
+		}
 	}
 }

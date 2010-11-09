@@ -47,7 +47,7 @@ public class ImportVenues extends RuAbstractProcess implements RuFeedHandler{
 		
 		venueDataGateway = (VenueGateway)factory.getDataAccess("venueDataAccsess");
 		ApplicationContext appCtx = new FileSystemXmlApplicationContext("app.xml");
-		venueService = (VenueServiceImpl)appCtx.getBean("VenueServiceImpl");
+		venueService = (VenueServiceImpl)appCtx.getBean("venueServiceImpl");
 		reader = new XMLFeedReader();
 		reader.setFeedHandler(this);
 		venueService.setDatagateway(venueDataGateway);

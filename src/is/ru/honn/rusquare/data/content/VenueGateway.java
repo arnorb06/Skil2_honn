@@ -77,5 +77,14 @@ public class VenueGateway extends RuGenericDataAccess implements DataGateway{
 		return jdbc.update("UPDATE venues SET totalCheckins=? WHERE id=?", new Object[] {venueDTO.getTotalCheckins(), venueDTO.getId()}); 
 		//insertContent.executeAndReturnKey(parameters).intValue();
 	}
-	
+
+
+	/* (non-Javadoc)
+	 * @see is.ru.honn.rusquare.data.content.DataGateway#getUsersByVenueId(int)
+	 */
+	@Override
+	public List getUsersByVenueId(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

@@ -77,4 +77,7 @@ public class VenueServiceImpl implements VenueService{
 		return datagateway.updateTotalCheckins(venueDTO); 
 	}
 	
+	public VenueDTO getContentById(int id){
+		return (VenueDTO) datagateway.getContentById(id);
+	}
 }

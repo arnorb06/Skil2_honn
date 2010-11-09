@@ -19,6 +19,10 @@ public class CheckinDTO extends ContentDTO{
 	private String username;
 	private int venueId;
 	
+	
+	public CheckinDTO(){
+		
+	}
 	/**
 	 * @param id
 	 * @param title
@@ -26,9 +30,19 @@ public class CheckinDTO extends ContentDTO{
 	 * @param username
 	 * @param venueId
 	 */
-	public CheckinDTO(String title, Date checkinDate, String username,
+	public CheckinDTO(int id, String title, Date checkinDate, String username,
 			int venueId) {
 		super();
+		this.id = id;
+		Title = title;
+		this.checkinDate = checkinDate;
+		this.username = username;
+		this.venueId = venueId;
+	}
+	public CheckinDTO( String title, Date checkinDate, String username,
+			int venueId) {
+		super();
+		this.id = id;
 		Title = title;
 		this.checkinDate = checkinDate;
 		this.username = username;
