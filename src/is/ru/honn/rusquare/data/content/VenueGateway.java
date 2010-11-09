@@ -69,4 +69,13 @@ public class VenueGateway extends RuGenericDataAccess implements DataGateway{
 		
 		return (VenueDTO)jdbc.queryForObject("SELECT * FROM venues WHERE id=?", new VenueRowMapper(), id);
 	}
+	
+	public int updateTotalCheckins(VenueDTO venueDTO) {
+		SimpleJdbcInsert insertContent = new SimpleJdbcInsert(getDataSource()).withTableName("venues").usingGeneratedKeyColumns("id");
+		SimpleJdbcTemplate jdbc = new SimpleJdbcTemplate(getDataSource());
+
+		return jdbc.update("UPDATE venues SET totalCheckins=? WHERE id=?", new Object[] {venueDTO.getTotalCheckins(), venueDTO.getId()}); 
+		//insertContent.executeAndReturnKey(parameters).intValue();
+	}
+	
 }
