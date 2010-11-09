@@ -55,15 +55,15 @@ public class RuSqureClient {
 		Checkin checkin = checkinServiceImpl.checkin(args[0], args[1]);
 		
 		VenueDTO venueDTO = venueServiceImpl.getVenueByName(checkin.getTitle());
-		List list = checkinServiceImpl.getUsersByVenueId(venueDTO.getId());
-		Iterator it = list.iterator();
+//		List list = checkinServiceImpl.getUsersByVenueId(venueDTO.getId());
+//		Iterator it = list.iterator();
 		System.out.println("You have logged into: "+ venueDTO.getName());
 		System.out.println("Total number of checkins: "+ venueDTO.getTotalCheckins());
 		System.out.println("Also checked in there: ");
-		while(it.hasNext()){
-			CheckinDTO checkinDTO = new CheckinDTO();
-			checkinDTO = (CheckinDTO) it.next();
-			System.out.println(checkinDTO.getUsername());
-		}
+//		while(it.hasNext()){
+//			CheckinDTO checkinDTO = new CheckinDTO();
+//			checkinDTO = (CheckinDTO) it.next();
+//			System.out.println(checkinDTO.getUsername());
+//		}
 	}
 }
