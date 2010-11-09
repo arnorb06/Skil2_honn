@@ -31,5 +31,4 @@ public class CheckinRowMapper extends RuAbstractRowMapper{
 		add(checkin);
 		return checkin;
 	}
-
 }

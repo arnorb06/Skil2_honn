@@ -61,9 +61,9 @@ public class RuSqureClient {
 		System.out.println("Total number of checkins: "+ venueDTO.getTotalCheckins());
 		System.out.println("Also checked in there: ");
 		while(it.hasNext()){
-			CheckinDTO checkinDTO = new CheckinDTO();
-			checkinDTO = (CheckinDTO) it.next();
-			System.out.println(checkinDTO.getUsername());
+			String s;
+			s = (String) (it.next());
+			System.out.println(s);
 		}
 	}
 }

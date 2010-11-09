@@ -69,7 +69,7 @@ public class CheckinGateway extends RuGenericDataAccess implements DataGateway {
 	@Override
 	public List getUsersByVenueId(int id) {
 		JdbcTemplate jdbc = new JdbcTemplate(getDataSource());
-		CheckinRowMapper mapper = new CheckinRowMapper(); 
+		UsernameMapper mapper = new UsernameMapper(); 
 		jdbc.query("select username from checkin where venueid=? group by username",
 	               new Object[]{id}, mapper);
 		return mapper.getResults();
