@@ -45,7 +45,7 @@ public class Checkin {
 	
 	public Checkin doCheckin(CheckinDTO checkinDTO) {
 		this.title = checkinDTO.getTitle();
-		System.out.println(this.title);
+		
 		this.date = checkinDTO.getCheckinDate();
 		this.username = checkinDTO.getUsername();
 		this.venueId = checkinDTO.getVenueId();
