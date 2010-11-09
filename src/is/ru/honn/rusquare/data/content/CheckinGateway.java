@@ -54,4 +54,13 @@ public class CheckinGateway extends RuGenericDataAccess implements DataGateway {
 		return null;
 	}
 
+	/* (non-Javadoc)
+	 * @see is.ru.honn.rusquare.data.content.DataGateway#getContentById(int)
+	 */
+	@Override
+	public ContentDTO getContentById(int id) {
+
+		return null;
+	}
+
 }

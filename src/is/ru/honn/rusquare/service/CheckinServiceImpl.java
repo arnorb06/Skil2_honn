@@ -7,9 +7,12 @@ package is.ru.honn.rusquare.service;
 
 import is.ru.honn.rusquare.data.content.CheckinDTO;
 import is.ru.honn.rusquare.data.content.CheckinGateway;
+import is.ru.honn.rusquare.data.content.ContentDTO;
 import is.ru.honn.rusquare.data.content.DataGateway;
+import is.ru.honn.rusquare.data.content.VenueDTO;
 import is.ru.honn.rusquare.domain.Checkin;
 
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -19,14 +22,24 @@ import java.util.List;
 public class CheckinServiceImpl implements CheckinService{
 	
 	DataGateway dataGateway = new CheckinGateway();
+	VenueServiceImpl venueServiceImpl;
+	Checkin checkin;
 	
 	/* (non-Javadoc)
 	 * @see is.ru.honn.rusquare.service.CheckinService#checkin(java.lang.String, java.lang.String)
 	 */
 	@Override
-	public Checkin checkin(String username, String venuename) {
+	public Checkin checkin(String username, String venueName) {
 		
-		return null;
+		VenueDTO venueDTO = venueServiceImpl.getVenueByName(venueName);
+		int venueId = venueDTO.getId(); 
+		//TODO update venue table with VenueGateway.update()
+		
+		CheckinDTO checkinDTO = new CheckinDTO(venueName, new Date(), username, venueId);
+		
+		dataGateway.add(checkinDTO);
+		
+		return checkin.doCheckin(checkinDTO);
 	}
 	
 	public void add(CheckinDTO checkin){
@@ -36,4 +49,28 @@ public class CheckinServiceImpl implements CheckinService{
 		return dataGateway.getContent();
 	}
 
+	/**
+	 * @return the dataGateway
+	 */
+	public DataGateway getDataGateway() {
+		return dataGateway;
+	}
+	
+	/**
+	 * @param dataGateway the dataGateway to set
+	 */
+	public void setDataGateway(DataGateway dataGateway) {
+		this.dataGateway = dataGateway;
+	}
+
+	/**
+	 * @param venueServiceImpl the venueServiceImpl to set
+	 */
+	public void setVenueServiceImpl(VenueServiceImpl venueServiceImpl) {
+		this.venueServiceImpl = venueServiceImpl;
+	}
+	
+	public VenueDTO getContentById(int id) {
+		return null;
+	}
 }

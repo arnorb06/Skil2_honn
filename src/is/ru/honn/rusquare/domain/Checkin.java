@@ -5,6 +5,9 @@
  */
 package is.ru.honn.rusquare.domain;
 
+import is.ru.honn.rusquare.data.content.CheckinDTO;
+import is.ru.honn.rusquare.data.content.VenueDTO;
+
 import java.util.Date;
 
 /**
@@ -18,6 +21,9 @@ public class Checkin {
 	Date date;
 	String username;
 	int venueId;
+	
+	CheckinDTO checkinDTO;
+	
 	/**
 	 * @param id
 	 * @param title
@@ -25,20 +31,22 @@ public class Checkin {
 	 * @param username
 	 * @param venueId
 	 */
-	public Checkin(int id, String title, Date date, String username, int venueId) {
+	public Checkin(String title, Date date, String username, int venueId) {
 		super();
-		this.id = id;
 		this.title = title;
 		this.date = date;
 		this.username = username;
 		this.venueId = venueId;
 	}
 	
-	public void doCheckin(String title, Date date, String username, int venueId) {
-		this.title = title;
-		this.date = date;
-		this.username = username;
-		this.venueId = venueId;
+	public Checkin doCheckin(CheckinDTO checkinDTO) {
+		this.title = checkinDTO.getTitle();
+		this.date = checkinDTO.getCheckinDate();
+		this.username = checkinDTO.getUsername();
+		this.venueId = checkinDTO.getVenueId();
+		
+		return this; 
+		
 	}
 	
 	/**
@@ -101,7 +109,14 @@ public class Checkin {
 	public void setVenueId(int venueId) {
 		this.venueId = venueId;
 	}
-	public void doCheckin(){
-		
+
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		return "Checkin [id=" + id + ", title=" + title + ", date=" + date
+				+ ", username=" + username + ", venueId=" + venueId
+				+ ", checkinDTO=" + checkinDTO + "]";
 	}
 }

@@ -16,7 +16,7 @@ import java.util.Collection;
  * @version 1.0 Nov 7, 2010
  */
 public class VenueServiceImpl implements VenueService{
-	DataGateway datagateway = new VenueGateway();
+	VenueGateway datagateway = new VenueGateway();
 
 	/**
 	 * @return the datagateway
@@ -29,7 +29,7 @@ public class VenueServiceImpl implements VenueService{
 	 * @param datagateway the datagateway to set
 	 */
 	public void setDatagateway(DataGateway datagateway) {
-		this.datagateway = datagateway;
+		this.datagateway = (VenueGateway) datagateway;
 	}
 
 	/* (non-Javadoc)
@@ -59,6 +59,16 @@ public class VenueServiceImpl implements VenueService{
 	public VenueDTO getVenue(String name) {
 		return (VenueDTO) datagateway.getContentByName("Test");
 		//TODO Put real name as parameter
+	}
+	
+	public int getVenueIdByName(String venueName) {
+		int venueId = 0;
+		VenueDTO dto = datagateway.getVenueIdByName(venueName); 
+		return dto.getId();
+	}
+	
+	public VenueDTO getVenueByName(String venueName) {
+		return datagateway.getVenueIdByName(venueName);
 	}
 	
 }

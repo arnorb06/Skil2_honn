@@ -29,7 +29,10 @@ public class test_1 {
 	 */
 	public static void main(String[] args) {
 		
-		Logger log = Logger.getLogger("Test"); RuDataAccessFactory factory = null; try {
+		Logger log = Logger.getLogger("Test"); 
+		RuDataAccessFactory factory = null;
+		
+		try {
 			factory = RuDataAccessFactory.getInstance("data.xml");
 		} catch (RuException e) {
 			log.severe("Unable to load data specification in data.xml" + e.getMessage());
@@ -38,7 +41,7 @@ public class test_1 {
 		DataGateway checkinDataGateway = (CheckinGateway)factory.getDataAccess("checkinDataAccsess");
 		
 		//check for .add() into chenkin table
-		checkinDataGateway.add(new CheckinDTO(1, "title!", new Date(), "name", 1));
+		checkinDataGateway.add(new CheckinDTO("title!", new Date(), "name", 1));
 		
 		//test for .getContent() from checkin table
 		List clist = checkinDataGateway.getContent();

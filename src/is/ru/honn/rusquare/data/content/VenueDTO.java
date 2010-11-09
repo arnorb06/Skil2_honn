@@ -46,6 +46,12 @@ public class VenueDTO extends ContentDTO{
 		this.totalCheckins = totalCheckins;
 	}
 	/**
+	 * @return the id
+	 */
+	public int getId() {
+		return id;
+	}
+	/**
 	 * @param id the id to set
 	 */
 	public void setId(int id) {

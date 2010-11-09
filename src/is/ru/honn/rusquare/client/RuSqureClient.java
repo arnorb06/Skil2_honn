@@ -5,7 +5,13 @@
  */
 package is.ru.honn.rusquare.client;
 
-import is.ru.honn.rusquare.service.CheckinService;
+import is.ru.honn.rusquare.data.content.CheckinGateway;
+import is.ru.honn.rusquare.data.content.DataGateway;
+import is.ru.honn.rusquare.data.content.VenueGateway;
+import is.ru.honn.rusquare.service.CheckinServiceImpl;
+import is.ru.honn.rusquare.service.VenueServiceImpl;
+import is.ruframework.data.RuDataAccessFactory;
+import is.ruframework.factory.RuException;
 
 import java.util.logging.Logger;
 
@@ -20,13 +26,29 @@ public class RuSqureClient {
 	
 	//TODO change function name
 	public static void main(String args[]) {
-		//Logger log = Logger.getLogger(this.getClass().getName());
-		//log.info("before process");
+		Logger log = Logger.getLogger("RuSquareClient");
+		log.info("in main");
+
+		RuDataAccessFactory factory = null;
+		try {
+			factory = RuDataAccessFactory.getInstance("data.xml");
+		} catch (RuException e) {
+			log.severe("Unable to load data specification in data.xml" + e.getMessage());
+		}
+		
+		DataGateway checkinDataGateway = (CheckinGateway)factory.getDataAccess("checkinDataAccsess");
+		DataGateway venueDataGateway = (VenueGateway)factory.getDataAccess("venueDataAccsess");
 		
 		ApplicationContext appCon = new FileSystemXmlApplicationContext("app.xml");
-		CheckinService checkinService = (CheckinService) appCon.getBean("checkinService");
+		CheckinServiceImpl checkinServiceImpl = (CheckinServiceImpl) appCon.getBean("checkinServiceImpl");
+		VenueServiceImpl venueServiceImpl = (VenueServiceImpl) appCon.getBean("venueServiceImpl");
 		
+		checkinServiceImpl.setDataGateway(checkinDataGateway);
+		venueServiceImpl.setDatagateway(venueDataGateway);
+		checkinServiceImpl.setVenueServiceImpl(venueServiceImpl);
 		
+		checkinServiceImpl.checkin(args[0], args[1]);
 		
+		System.out.println("You have logged into: ");
 	}
 }

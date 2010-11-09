@@ -23,8 +23,7 @@ public class CheckinRowMapper extends RuAbstractRowMapper{
 	@Override
 	public Object mapRow(ResultSet rs, int rowNum) throws SQLException {
 		
-		Object checkin = new CheckinDTO(rs.getInt(1), 
-									  		rs.getString(2), 
+		Object checkin = new CheckinDTO( 	rs.getString(2), 
 									  		rs.getDate(3), 
 									  		rs.getString(4), 
 									  		rs.getInt(5));

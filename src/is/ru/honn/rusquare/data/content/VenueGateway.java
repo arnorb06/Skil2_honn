@@ -51,4 +51,22 @@ public class VenueGateway extends RuGenericDataAccess implements DataGateway{
 		//work when there is a single instance of name, not when there are multiple entries with name
 		return (VenueDTO)jdbc.queryForObject("select * from venues where name=" + name, new VenueRowMapper());
 	}
+	
+	public VenueDTO getVenueIdByName(String venueName) {
+		
+		int retValue = 0;
+		SimpleJdbcTemplate jdbc = new SimpleJdbcTemplate(getDataSource());
+		
+		return (VenueDTO)jdbc.queryForObject("SELECT * FROM venues WHERE name=?", new VenueRowMapper(), venueName);
+	}
+
+	/* (non-Javadoc)
+	 * @see is.ru.honn.rusquare.data.content.DataGateway#getContentById(int)
+	 */
+	@Override
+	public ContentDTO getContentById(int id) {
+		SimpleJdbcTemplate jdbc = new SimpleJdbcTemplate(getDataSource());
+		
+		return (VenueDTO)jdbc.queryForObject("SELECT * FROM venues WHERE id=?", new VenueRowMapper(), id);
+	}
 }
