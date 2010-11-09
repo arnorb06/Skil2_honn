@@ -104,28 +104,24 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </interface>  
-  <association>    
-    <source project="Skil2_honn" name="is.ru.honn.rusquare.service.VenueServiceImpl" 
-      file="/Skil2_honn/src/is/ru/honn/rusquare/service/VenueServiceImpl.java" binary="false" navigable="false">      
-      <attribute name="datagateway"/>      
-      <multiplicity minimum="0" maximum="1"/>    
-    </source>    
-    <target project="Skil2_honn" name="is.ru.honn.rusquare.data.content.DataGateway" 
-      file="/Skil2_honn/src/is/ru/honn/rusquare/data/content/DataGateway.java" binary="false" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <realization>    
-    <source project="Skil2_honn" name="is.ru.honn.rusquare.service.CheckinServiceImpl" 
-      file="/Skil2_honn/src/is/ru/honn/rusquare/service/CheckinServiceImpl.java" binary="false"/>    
-    <target project="Skil2_honn" name="is.ru.honn.rusquare.service.CheckinService" 
-      file="/Skil2_honn/src/is/ru/honn/rusquare/service/CheckinService.java" binary="false"/>  
-  </realization>  
   <realization>    
     <source project="Skil2_honn" name="is.ru.honn.rusquare.data.content.VenueGateway" 
       file="/Skil2_honn/src/is/ru/honn/rusquare/data/content/VenueGateway.java" binary="false"/>    
     <target project="Skil2_honn" name="is.ru.honn.rusquare.data.content.DataGateway" 
       file="/Skil2_honn/src/is/ru/honn/rusquare/data/content/DataGateway.java" binary="false"/>  
   </realization>  
+  <realization>    
+    <source project="Skil2_honn" name="is.ru.honn.rusquare.service.CheckinServiceImpl" 
+      file="/Skil2_honn/src/is/ru/honn/rusquare/service/CheckinServiceImpl.java" binary="false"/>    
+    <target project="Skil2_honn" name="is.ru.honn.rusquare.service.CheckinService" 
+      file="/Skil2_honn/src/is/ru/honn/rusquare/service/CheckinService.java" binary="false"/>  
+  </realization>  
+  <generalization>    
+    <source project="Skil2_honn" name="is.ru.honn.rusquare.data.content.CheckinDTO" 
+      file="/Skil2_honn/src/is/ru/honn/rusquare/data/content/CheckinDTO.java" binary="false"/>    
+    <target project="Skil2_honn" name="is.ru.honn.rusquare.data.content.ContentDTO" 
+      file="/Skil2_honn/src/is/ru/honn/rusquare/data/content/ContentDTO.java" binary="false"/>  
+  </generalization>  
   <association>    
     <source project="Skil2_honn" name="is.ru.honn.rusquare.service.CheckinServiceImpl" 
       file="/Skil2_honn/src/is/ru/honn/rusquare/service/CheckinServiceImpl.java" binary="false" navigable="false">      
@@ -142,12 +138,6 @@
     <target project="Skil2_honn" name="is.ru.honn.rusquare.service.VenueService" 
       file="/Skil2_honn/src/is/ru/honn/rusquare/service/VenueService.java" binary="false"/>  
   </realization>  
-  <generalization>    
-    <source project="Skil2_honn" name="is.ru.honn.rusquare.data.content.CheckinDTO" 
-      file="/Skil2_honn/src/is/ru/honn/rusquare/data/content/CheckinDTO.java" binary="false"/>    
-    <target project="Skil2_honn" name="is.ru.honn.rusquare.data.content.ContentDTO" 
-      file="/Skil2_honn/src/is/ru/honn/rusquare/data/content/ContentDTO.java" binary="false"/>  
-  </generalization>  
   <generalization>    
     <source project="Skil2_honn" name="is.ru.honn.rusquare.data.content.VenueDTO" 
       file="/Skil2_honn/src/is/ru/honn/rusquare/data/content/VenueDTO.java" binary="false"/>    
